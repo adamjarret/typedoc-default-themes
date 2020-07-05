@@ -93,7 +93,7 @@ module.exports = function(grunt)
                 files: [{
                     expand: true,
                     cwd: 'src/default',
-                    src: ['**/*.hbs', '**/*.png'],
+                    src: ['**/*.hbs', '**/*.png', '**/assets/**/*.gif', '**/*.js', '!**/*.test.js'],
                     dest: 'bin/default'
                 }]
             },
@@ -124,7 +124,7 @@ module.exports = function(grunt)
                 tasks: ['css']
             },
             default: {
-                files: ['src/default/**/*.hbs'],
+                files: ['src/default/**/*.hbs', 'src/default/**/*.js', '!src/default/**/*.test.js'],
                 tasks: ['copy', 'string-replace']
             },
             minimal: {

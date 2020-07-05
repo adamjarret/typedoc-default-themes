@@ -1,3 +1,42 @@
-<div class="tsd-panel tsd-typography">
-    {{#markdown}}{{{model.readme}}}{{/markdown}}
+<div class="demo">
+    <img src="assets/images/demo.gif" alt="demo" />
 </div>
+
+<div class="matrix">
+{{#markdown}}
+
+| _Keep files in sync_ | **To Local** | **To S3** |
+| ---:                 | :---:        | :---:     |
+| **From Local**       | &#10003;     | &#10003;  |
+| **From S3**          | &#10003;     | &#10003;  |
+
+{{/markdown}}
+</div>
+
+<div class="tsd-panel tsd-typography">
+{{#markdown}}
+- [CLI](pages/cli/s3p.html) and a modular [API](globals.html)
+- Supports custom [ignore](pages/guides/ignore.html) and [compare](pages/guides/compare.html) functions
+- [Request parameters](pages/guides/requests.html)  can be set programmatically
+- Advanced users can [implement custom providers](pages/guides/advanced.html)
+
+This project does not aim to replace general purpose S3 clients like [AWS CLI](https://aws.amazon.com/cli/).
+It is focused on facilitating granular control over specific tasks like deploying static sites to S3.
+
+See {@page Getting Started} for details.
+{{/markdown}}
+</div>
+
+<style type="text/css">
+    footer,
+    .tsd-page-title {
+        display: none;
+    }
+
+    .page-title-spacer {
+        display: block;
+        padding: 20px 0 20px 0;
+        margin: 0 0 40px 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+    }
+</style>

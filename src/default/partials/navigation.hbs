@@ -1,12 +1,12 @@
 {{#if isVisible}}
     {{#if isLabel}}
         <li class="label {{cssClasses}}">
-            <span>{{{wbr title}}}</span>
+            <span>{{#titleCase title}}{{{wbr this}}}{{/titleCase}}</span>
         </li>
     {{else}}
         {{#if isGlobals}}
             <li class="globals {{#if isInPath}}current{{/if}} {{cssClasses}}">
-                <a href="{{relativeURL url}}"><em>{{{wbr title}}}</em></a>
+                <a href="{{relativeURL url}}"><em>Modules</em></a>
             </li>
         {{else}}
             <li class="{{#if isInPath}}current{{/if}} {{cssClasses}}">

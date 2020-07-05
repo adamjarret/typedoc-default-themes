@@ -1,0 +1,16 @@
+<section>
+    {{#renderPage model.pagesPlugin.item.contents}}
+        {{#if title}}<h2 id="{{{id}}}">{{title}}</h2>{{/if}}
+        {{#if content}}
+        <section class="{{{className}}} tsd-panel tsd-typography">
+            {{#markdown}}{{{content}}}{{/markdown}}
+        </section>
+        {{/if}}
+    {{/renderPage}}
+</section>
+
+<style type="text/css">
+footer {
+    display: none;
+}
+</style>

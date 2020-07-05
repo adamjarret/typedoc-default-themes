@@ -42,7 +42,8 @@ namespace typedoc
 
         onDocumentPointerDown(e: Event) {
             if (this.active) {
-                if ((e.target as HTMLElement).closest('.col-menu, .tsd-filter-group')) {
+                const el = (e.target as HTMLElement)
+                if (el.closest('.col-menu, .tsd-filter-group') && !el.classList.contains('close-menu')) {
                     return;
                 }
 

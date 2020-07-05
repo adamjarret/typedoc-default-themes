@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{#ifCond model.name '==' project.name}}{{project.name}}{{else}}{{model.name}} | {{project.name}}{{/ifCond}}</title>
+    <title>{{#ifCond model.name '===' project.name}}{{project.name}}{{else}}{{model.name}} | {{project.name}}{{/ifCond}}</title>
     <meta name="description" content="Documentation for {{project.name}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{relativeURL "assets/css/main.css"}}">
 </head>
 <body>
@@ -19,7 +20,20 @@
             {{{contents}}}
         </div>
         <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+            <div class="close-button-container">
+                <button class="close-button close-menu">
+                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="close-menu">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" class="close-menu"></path>
+                </svg>
+                </button>
+            </div>
             <nav class="tsd-navigation primary">
+                <a class="badge" href="https://github.com/adamjarret/s3-publish">
+                    <img src="https://badgen.net/badge/source/GitHub/blue" alt="Git Repository" />
+                </a>
+                <a class="badge" href="https://npmjs.com/package/s3-publish">
+                    <img src="https://badgen.net/npm/v/s3-publish" alt="Package Version" />
+                </a>
                 <ul>
                     {{#each navigation.children}}
                         {{> navigation}}
